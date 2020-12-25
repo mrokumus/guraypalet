@@ -4,20 +4,22 @@ include "variables.php"; ?>
     <div class="row space-100">
         <div class="col-lg-6 col-md-12 col-xs-12">
             <div class="contents">
-                <h2 class="head-title"><?php the_field('ana_sayfa_baslik',"option"); ?></h2>
-                <p><?php the_field('ana_sayfa_metin',"option"); ?></p>
+                <h2 class="head-title"><?php the_field('ana_sayfa_baslik', "option"); ?></h2>
+                <p><?php the_field('ana_sayfa_metin', "option"); ?></p>
                 <div class="header-button">
-                    <? if (the_field('telefon_numarasi',"option") == ""): else: ?>
-                    <a href="tel:<? echo $phoneNumber ?>" class="btn btn-border-filled">Telefon</a>
-                    <? endif;?>
-                    <? if (the_field('whatsapp_numarasi',"option") == ""): else: ?>
+                    <? if (get_field('telefon_numarasi', "option") == ""): else: ?>
+                        <a href="tel:<? echo $phoneNumber ?>" class="btn btn-border-filled"
+                           style="background-color: #2F3556;border-color: #2F3556">Telefon</a>
+                    <? endif; ?>
+                    <? if (get_field('whatsapp_numarasi', "option") == ""): else: ?>
                         <a href="<? echo $whatsappUrl ?>" class="btn btn-border-filled">WhatsApp</a>
-                    <? endif;?>
-                        <a href="tel:<? echo $phoneNumber ?>" class="btn btn-border-filled">Mail</a>
+                    <? endif; ?>
+                    <a href="tel:<? echo $phoneNumber ?>" class="btn btn-border-filled"
+                       style="background-color: #ee6f57;border-color: #ee6f57">Mail</a>
                 </div>
             </div>
         </div>
-        <? $ana_sayfa_resim = the_field('ana_sayfa_resim',"option"); ?>
+        <? $ana_sayfa_resim = get_field('ana_sayfa_resim', "option"); ?>
         <div class="col-lg-6 col-md-12 col-xs-12 p-0">
             <div class="intro-img">
                 <img src="<? echo $ana_sayfa_resim["url"] ?>" alt="">
@@ -26,15 +28,10 @@ include "variables.php"; ?>
     </div>
 </div>
 </header>
-<!-- Header Section End -->
 
-
-<!-- Services Section Start -->
-<section id="services" class="section">
+<section id="values" class="section">
     <div class="container">
-
         <div class="row">
-            <!-- Start Col -->
             <div class="col-lg-4 col-md-6 col-xs-12">
                 <div class="services-item text-center">
                     <div class="icon">
@@ -45,36 +42,9 @@ include "variables.php"; ?>
                         safe.</p>
                 </div>
             </div>
-            <!-- End Col -->
-            <!-- Start Col -->
-            <div class="col-lg-4 col-md-6 col-xs-12">
-                <div class="services-item text-center">
-                    <div class="icon">
-                        <i class="lni-brush"></i>
-                    </div>
-                    <h4>Slick Design</h4>
-                    <p>Share processes and data secure lona need to know basis Our team assured your web site is always
-                        safe.</p>
-                </div>
-            </div>
-            <!-- End Col -->
-            <!-- Start Col -->
-            <div class="col-lg-4 col-md-6 col-xs-12">
-                <div class="services-item text-center">
-                    <div class="icon">
-                        <i class="lni-heart"></i>
-                    </div>
-                    <h4>Crafted with Love</h4>
-                    <p>Share processes and data secure lona need to know basis Our team assured your web site is always
-                        safe.</p>
-                </div>
-            </div>
-            <!-- End Col -->
-
         </div>
     </div>
 </section>
-<!-- Services Section End -->
 
 
 <!-- Business Plan Section Start -->

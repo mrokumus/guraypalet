@@ -54,10 +54,7 @@
                         <a class="nav-link page-scroll" href="#home">Ana Sayfa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#about">Hakkımızda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#home">Ana Sayfa</a>
+                        <a class="nav-link page-scroll" href="#values">İlkelerimiz</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#about">Hakkımızda</a>
