@@ -1,11 +1,15 @@
+<?
+include "variables.php";
+?>
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="Bootstrap, Landing page, Template, Business, Service">
+    <meta name="keywords" content="palet, Güray, Ahşap Palet, Euro Palet, İkinci el palet, Sıfır Palet">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="Grayrids">
+    <meta name="author" content="Güray Palet">
     <title>
         <?php if ($_SERVER["REQUEST_URI"] == "/") {
             echo "Ana Sayfa | GÜRAY PALET";
@@ -13,7 +17,8 @@
             wp_title('| GÜRAY PALET', true, 'right');
         } ?>
     </title>
-    <link rel="shortcut icon" href="img/2.png" type="image/png">
+
+    <link rel="shortcut icon" href="<? echo $logo_url?>" type="image/png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="<? echo get_template_directory_uri() ?>/scss/css/animate.css">
     <link rel="stylesheet" href="<? echo get_template_directory_uri() ?>/scss/css/LineIcons.css">
@@ -37,7 +42,7 @@
     </div>
     <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
         <div class="container">
-            <a href="index.html" class="navbar-brand"><img src="img/logo.png" alt=""></a>
+            <a href="/" class="navbar-brand"><img  style="max-height: 50px" src="<?echo $logo_url?>" alt="Güray Palet"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="lni-menu"></i>
