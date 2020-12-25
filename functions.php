@@ -38,7 +38,39 @@ if ( function_exists( 'acf_add_options_page' ) ) {
         'redirect'   => false
     ) );
 
+    acf_add_options_page( array(
+        'page_title'  => 'Ana Sayfa Ayarları',
+        'menu_title'  => 'Ana Sayfa Ayarları',
+        'menu_slug'   => 'home-settings',
+        'parent_slug' => 'general-settings',
+        'capability'  => 'manage_options',
+        'redirect'    => false
+    ) );
+    acf_add_options_page( array(
+        'page_title'  => 'Hakkımızda Ayarları',
+        'menu_title'  => 'Hakkımızda Ayarları',
+        'menu_slug'   => 'about-settings',
+        'parent_slug' => 'general-settings',
+        'capability'  => 'manage_options',
+        'redirect'    => false
+    ) );
+    acf_add_options_page( array(
+        'page_title'  => 'Hizmetlerimiz Ayarları',
+        'menu_title'  => 'Hizmerlerimiz Ayarları',
+        'menu_slug'   => 'services-settings',
+        'parent_slug' => 'general-settings',
+        'capability'  => 'manage_options',
+        'redirect'    => false
+    ) );
 
+    acf_add_options_page( array(
+        'page_title'  => 'İletişim Ayarları',
+        'menu_title'  => 'İletişim Ayarları',
+        'menu_slug'   => 'contact-settings',
+        'parent_slug' => 'general-settings',
+        'capability'  => 'manage_options',
+        'redirect'    => false
+    ) );
 }
 
 /*LOGIN STYLE*/
