@@ -20,7 +20,7 @@
         } ?>
     </title>
 
-    <link rel="shortcut icon" href="<? echo $logo_url ?>" type="image/png">
+    <link rel="shortcut icon" href="<? echo $favIcon["url"] ?>" type="image/png">
     <link rel="stylesheet" href="<? echo get_template_directory_uri() ?>/scss/css/bootstrap.min.css">
     <link rel="stylesheet" href="<? echo get_template_directory_uri() ?>/scss/css/animate.css">
     <link rel="stylesheet" href="<? echo get_template_directory_uri() ?>/scss/css/LineIcons.css">
@@ -43,7 +43,7 @@
     </div>
     <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
         <div class="container">
-            <a href="/" class="navbar-brand"><img style="max-height: 50px" src="<? echo $logo_url ?>" alt="Güray Palet"></a>
+            <a href="/" class="navbar-brand"><img style="max-height: 50px" src="<? echo $logoUrl["url"] ?>" alt="Güray Palet"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="lni-menu"></i>

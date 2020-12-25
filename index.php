@@ -1,24 +1,30 @@
-<? get_header()?>
-    <div class="container">
-        <div class="row space-100">
-            <div class="col-lg-6 col-md-12 col-xs-12">
-                <div class="contents">
-                    <h2 class="head-title">Handcrafted Web Template <br>For Business and Startups</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab <br>dolores ea fugiat nesciunt
-                        quisquam.</p>
-                    <div class="header-button">
-                        <a href="#" class="btn btn-border-filled">Get Started</a>
-                        <a href="#contact" class="btn btn-border page-scroll">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12 col-xs-12 p-0">
-                <div class="intro-img">
-                    <img src="img/intro.png" alt="">
+<? get_header();
+include "variables.php"; ?>
+<div class="container">
+    <div class="row space-100">
+        <div class="col-lg-6 col-md-12 col-xs-12">
+            <div class="contents">
+                <h2 class="head-title"><?php the_field('ana_sayfa_baslik',"option"); ?></h2>
+                <p><?php the_field('ana_sayfa_metin',"option"); ?></p>
+                <div class="header-button">
+                    <? if (the_field('telefon_numarasi',"option") == ""): else: ?>
+                    <a href="tel:<? echo $phoneNumber ?>" class="btn btn-border-filled">Telefon</a>
+                    <? endif;?>
+                    <? if (the_field('whatsapp_numarasi',"option") == ""): else: ?>
+                        <a href="<? echo $whatsappUrl ?>" class="btn btn-border-filled">WhatsApp</a>
+                    <? endif;?>
+                        <a href="tel:<? echo $phoneNumber ?>" class="btn btn-border-filled">Mail</a>
                 </div>
             </div>
         </div>
+        <? $ana_sayfa_resim = the_field('ana_sayfa_resim',"option"); ?>
+        <div class="col-lg-6 col-md-12 col-xs-12 p-0">
+            <div class="intro-img">
+                <img src="<? echo $ana_sayfa_resim["url"] ?>" alt="">
+            </div>
+        </div>
     </div>
+</div>
 </header>
 <!-- Header Section End -->
 
@@ -1210,6 +1216,6 @@
     <i class="lni-chevron-up"></i>
 </a>
 
-<? get_footer()?>
+<? get_footer() ?>
 
 
