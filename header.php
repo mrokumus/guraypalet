@@ -19,7 +19,7 @@ include "variables.php";
     </title>
 
     <link rel="shortcut icon" href="<? echo $logo_url?>" type="image/png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<? echo get_template_directory_uri() ?>/scss/css/bootstrap.min.css">
     <link rel="stylesheet" href="<? echo get_template_directory_uri() ?>/scss/css/animate.css">
     <link rel="stylesheet" href="<? echo get_template_directory_uri() ?>/scss/css/LineIcons.css">
     <link rel="stylesheet" href="<? echo get_template_directory_uri() ?>/scss/css/owl.carousel.css">
@@ -52,30 +52,7 @@ include "variables.php";
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#home">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#services">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#features">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#showcase">Showcase</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#pricing">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#team">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#blog">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-singin" href="#">Download</a>
-                    </li>
+
                 </ul>
             </div>
         </div>
