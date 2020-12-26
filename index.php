@@ -130,31 +130,37 @@ include "variables.php"; ?>
                 </div>
             </div>
         </div>
-
         <div class="row justify-content-center showcase-area">
             <div class="col-lg-12 col-md-12 col-xs-12 pr-0">
                 <div class="showcase-slider owl-carousel">
-                    <?php if (have_rows('fotograflar', 'option')):
-                        while (have_rows('fotograflar', 'option')):
-                            the_row();
-                            ?>
-                            <div class="owl-item" style="width: 323px; height: 323px">
-                                <div class="item">
-                                    <div class="screenshot-thumb">
-                                        <img src="<? echo get_sub_field("fotograf", "option")["url"] ?>"
-                                             class="img-fluid"
-                                             alt=""/>
-                                    </div>
-                                </div>
-                            </div>
-                        <? endwhile;endif; ?>
+                    <?php if (have_rows('fotograflar', 'option')):while (have_rows('fotograflar', 'option')):the_row(); ?>
+                    <div class="item">
+                        <div class="screenshot-thumb" style="height: 500px; max-width: 300px; margin: 10px">
+                            <img src="<? echo get_sub_field("fotograf", "option")["url"] ?>" class="img-fluid" alt="" />
+                        </div>
+                    </div>
+                    <? endwhile;endif; ?>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- SSS -->
+<section id="faq" class="section" style="margin-top: 50px ">
+    <div class="row gradient-bg">
+        <div class="col-lg-12">
+            <div class="showcase-text section-header text-center">
+                <div>
+                    <h2 class="section-title"><? echo get_field("fotograflar_baslik", "option") ?></h2>
+                    <div class="desc-text">
+                        <p><? echo get_field("fotograflar_metin", "option") ?></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<!-- SSS -->
-<section id="faq" class="section">
     <div class="container">
         <div id="accordion">
             <div class="card">
