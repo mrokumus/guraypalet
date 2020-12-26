@@ -1,3 +1,16 @@
+
+@import "css/animate.css";
+@import "css/LineIcons.css";
+@import "css/magnific-popup.css";
+@import "css/nivo-lightbox.css";
+@import "css/owl.carousel.css";
+@import "css/owl.theme.css";
+@import "css/responsive.css";
+@import "css/bootstrap.min.css";
+@import "css/main.css";
+
+
+//Custom Css //
 .service-card {
   padding: 15px 0;
   background-color: whitesmoke;
@@ -20,3 +33,68 @@
     background-color: darken(whitesmoke,0.12);
   }
 }
+
+
+#services {
+  background: #f9f9f9; }
+#services .featured-bg {
+  background: #fff; }
+#services .featured-border1 {
+  border-bottom: 1px solid #ededed;
+  border-right: 1px solid #ededed; }
+#services .featured-border2 {
+  border-bottom: 1px solid #ededed; }
+#services .featured-border3 {
+  border-right: 1px solid #ededed; }
+#services .feature-item {
+  padding: 30px;
+  overflow: hidden;
+  -moz-transition: all .8s ease;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease; }
+#services .feature-item .feature-icon {
+  background: whitesmoke;
+  width: 100px;
+  height: 100px;
+  margin: 0px auto;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-bottom: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 30px;
+  border: 1px solid #2c3253;
+  margin-top: 12px; }
+#services .feature-item .feature-icon i {
+  font-size: 40px;
+  color: #2c3253;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 32%; }
+#services .feature-item h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px; }
+#services .feature-item p {
+  font-size: 16px;
+  display: block; }
+#services .feature-item:hover {
+  box-shadow: 0px 0px 25px 0px rgba(95, 95, 95, 0.24);
+  -moz-transition: all .8s ease;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease; }
+#services .feature-item:hover .feature-icon {
+  background: #2c3253;
+  -moz-transition: all .8s ease;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease; }
+#services .feature-item:hover .feature-icon i {
+  color: #ffffff;
+  -moz-transition: all .8s ease;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease; }

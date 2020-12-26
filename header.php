@@ -22,15 +22,6 @@
 
     <link rel="shortcut icon" href="<? echo $favIcon["url"] ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
-    <link rel="stylesheet" href="<? echo get_template_directory_uri() ?>/scss/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<? echo get_template_directory_uri() ?>/scss/css/animate.css">
-    <link rel="stylesheet" href="<? echo get_template_directory_uri() ?>/scss/css/LineIcons.css">
-    <link rel="stylesheet" href="<? echo get_template_directory_uri() ?>/scss/css/owl.carousel.css">
-    <link rel="stylesheet" href="<? echo get_template_directory_uri() ?>/scss/css/owl.theme.css">
-    <link rel="stylesheet" href="<? echo get_template_directory_uri() ?>/scss/css/magnific-popup.css">
-    <link rel="stylesheet" href="<? echo get_template_directory_uri() ?>/scss/css/nivo-lightbox.css">
-    <link rel="stylesheet" href="<? echo get_template_directory_uri() ?>/scss/css/main.css">
-    <link rel="stylesheet" href="<? echo get_template_directory_uri() ?>/scss/css/responsive.css">
     <link rel="stylesheet" href="<? echo get_template_directory_uri() ?>/scss/main.css">
 
 </head>
@@ -63,6 +54,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#services">Hizmetlerimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#showcase">Fotoğraflar</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#faq"><abbr title="Sık Sorulan Sorular">SSS</abbr></a>
