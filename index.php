@@ -59,21 +59,21 @@ include "variables.php"; ?>
                         <img src="<? echo get_template_directory_uri() . "/inc/img/about_us.svg" ?>" class="img-fluid"
                              alt="About Us Image">
                     <? else: ?>
-                    <img src="<? $aboutImage = get_field("hakkimizda_resim", "option");
-                    echo $aboutImage["url"] ?>" class="img-fluid" alt="About Us Image">
-                    <?endif;?>
+                        <img src="<? $aboutImage = get_field("hakkimizda_resim", "option");
+                        echo $aboutImage["url"] ?>" class="img-fluid" alt="About Us Image">
+                    <? endif; ?>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 pl-4">
                 <div class="business-item-info">
-                    <h3><? echo get_field("hakkimizda_baslik", "option");?></h3>
-                    <p><? echo get_field("hakkimizda_metin", "option");?></p>
+                    <h3><? echo get_field("hakkimizda_baslik", "option"); ?></h3>
+                    <p><? echo get_field("hakkimizda_metin", "option"); ?></p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Cool Fetatures Section Start -->
+<!-- Hizmetlerimiz-->
 <section id="services" class="section">
     <div class="container">
         <!-- Start Row -->
@@ -81,36 +81,34 @@ include "variables.php"; ?>
             <div class="col-lg-12">
                 <div class="features-text section-header text-center">
                     <div>
-                        <h2 class="section-title"><? echo get_field("hakkimizda_baslik", "option");?></h2>
+                        <h2 class="section-title"><? echo get_field("hizmetlerimiz_baslik", "option"); ?></h2>
                         <div class="desc-text">
-                            <p><? echo get_field("hakkimizda_baslik", "option");?>.</p>
+                            <p><? echo get_field("hizmetlerimiz_metin", "option"); ?>.</p>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="row featured-bg">
-            <div class="col-lg-6 col-md-6 col-xs-12 p-0">
-                <!-- Start Fetatures -->
-                <div class="feature-item featured-border2">
-                    <div class="feature-icon float-left">
-                        <i class="lni-briefcase"></i>
+            <?php if (have_rows('hizmetler', 'option')):
+                while (have_rows('hizmetler', 'option')):
+                    the_row(); ?>
+                    <div class="col-lg-6 col-md-6 col-xs-12 p-0">
+                        <div class="feature-item featured-border2">
+                            <div class="feature-icon float-left">
+                                <? echo get_sub_field("hizmetler_icon", "option"); ?>
+                            </div>
+                            <div class="feature-info float-left">
+                                <h4><? echo get_sub_field("hizmetler_baslik", "option"); ?></h4>
+                                <p><? echo get_sub_field("hizmetler_metin", "option"); ?></p>
+                            </div>
+                        </div>
+                        <!-- End Fetatures -->
                     </div>
-                    <div class="feature-info float-left">
-                        <h4>Business Template</h4>
-                        <p>Producing long lasting organic SEO results for <br> brand of different kinds for more than a
-                            decade,<br> we understand that’s your.</p>
-                    </div>
-                </div>
-                <!-- End Fetatures -->
-            </div>
+                <? endwhile;endif; ?>
         </div>
     </div>
 </section>
-<!-- Cool Fetatures Section End -->
-
-
 <!-- Recent Showcase Section Start -->
 <section id="showcase">
     <div class="container-fluid right-position">
@@ -547,7 +545,77 @@ include "variables.php"; ?>
     </div>
 </section>
 <!-- Recent Showcase Section End -->
+<section id="faq" class="section">
+    <div class="container">
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                            Collapsible Group Item #1
+                        </button>
+                    </h5>
+                </div>
 
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                        of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                            Collapsible Group Item #2
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                        of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">
+                            Collapsible Group Item #3
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                        of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 <!-- İletişim -->
 <section id="contact" class="section">
     <!-- Container Starts -->
