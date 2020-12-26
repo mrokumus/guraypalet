@@ -62,7 +62,10 @@
                         <a class="nav-link page-scroll" href="#about">Hakkımızda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#home">Ana Sayfa</a>
+                        <a class="nav-link page-scroll" href="#services">Hizmetlerimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#faq"><abbr title="Sık Sorulan Sorular">SSS</abbr></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#contact">İletişim</a>
