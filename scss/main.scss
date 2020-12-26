@@ -1,3 +1,22 @@
-body{
-  background-color: red;
+.service-card {
+  padding: 15px 0;
+  background-color: whitesmoke;
+
+  h4 {
+    font-size: 1.70em;
+    font-weight: 900;
+    margin: 10px;
+  }
+
+  .service-icon {
+    color: #ee6f57
+  }
+
+  &:hover {
+    .service-icon {
+      color: #1f3c88;
+    }
+    color: whitesmoke;
+    background-color: darken(whitesmoke,0.12);
+  }
 }

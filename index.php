@@ -14,8 +14,6 @@ include "variables.php"; ?>
                     <? if (get_field('whatsapp_numarasi', "option") == ""): else: ?>
                         <a href="<? echo $whatsappUrl ?>" class="btn btn-border-filled">WhatsApp</a>
                     <? endif; ?>
-                    <a href="tel:<? echo $phoneNumber ?>" class="btn btn-border-filled"
-                       style="background-color: #ee6f57;border-color: #ee6f57">Mail</a>
                 </div>
             </div>
         </div>
@@ -32,30 +30,31 @@ include "variables.php"; ?>
 <section id="values" class="section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-xs-12">
-                <div class="services-item text-center">
-                    <div class="icon">
-                        <i class="lni-cog"></i>
+            <?php if (have_rows('ilkeler', 'option')):
+                while (have_rows('ilkeler', 'option')):
+                    the_row(); ?>
+                    <div class="col-lg-3 col-md-6 col-xs-12">
+                        <div class="services-item text-center card h-100 service-card">
+                            <div class="icon">
+                                <i style="font-size: 60px;" class="<?php the_sub_field( 'ilkeler_icon' ); ?> service-icon"></i>
+                            </div>
+                            <div class="card-body" style="padding: 10px">
+                                <h4><?php the_sub_field( 'ilkeler_baslik' ); ?></h4>
+                                <p><?php the_sub_field( 'ilkeler_metin' ); ?></p>
+                            </div>
+                        </div>
                     </div>
-                    <h4>Bootstrap 4</h4>
-                    <p>Share processes and data secure lona need to know basis Our team assured your web site is always
-                        safe.</p>
-                </div>
-            </div>
+                <? endwhile; endif; ?>
         </div>
     </div>
 </section>
-
-
-<!-- Business Plan Section Start -->
+<!-- Hakkımızda-->
 <section id="business-plan">
     <div class="container">
-
         <div class="row">
-            <!-- Start Col -->
             <div class="col-lg-6 col-md-12 pl-0 pt-70 pr-5">
                 <div class="business-item-img">
-                    <img src="img/business/business-img.png" class="img-fluid" alt="">
+                    <img src="" class="img-fluid" alt="">
                 </div>
             </div>
             <!-- End Col -->
@@ -235,7 +234,7 @@ include "variables.php"; ?>
                 <div class="showcase-slider owl-carousel">
                     <div class="item">
                         <div class="screenshot-thumb">
-                            <img src="img/showcase/01.jpg" class="img-fluid" alt=""/>
+                            <img src="https://picsum.photos/seed/picsum/200/300" class="img-fluid" alt=""/>
                             <div class="hover-content text-center">
                                 <div class="fancy-table">
                                     <div class="table-cell">
@@ -244,7 +243,7 @@ include "variables.php"; ?>
                                             <h5>Redesign Slack</h5>
                                         </div>
                                         <div class="zoom-icon">
-                                            <a class="lightbox" href="img/showcase/01.jpg"><i
+                                            <a class="lightbox" href="https://picsum.photos/seed/picsum/200/300"><i
                                                         class="lni-zoom-in"></i></a>
                                             <a href="#"><i class="lni-link"></i></a>
                                         </div>
@@ -256,7 +255,7 @@ include "variables.php"; ?>
                     </div>
                     <div class="item">
                         <div class="screenshot-thumb">
-                            <img src="img/showcase/02.jpg" class="img-fluid" alt=""/>
+                            <img src="https://picsum.photos/seed/picsum/200/300" class="img-fluid" alt=""/>
                             <div class="hover-content text-center">
                                 <div class="fancy-table">
                                     <div class="table-cell">
@@ -265,7 +264,7 @@ include "variables.php"; ?>
                                             <h5>Redesign Slack</h5>
                                         </div>
                                         <div class="zoom-icon">
-                                            <a class="lightbox" href="img/showcase/02.jpg"><i
+                                            <a class="lightbox" href="https://picsum.photos/seed/picsum/200/300"><i
                                                         class="lni-zoom-in"></i></a>
                                             <a href="#"><i class="lni-link"></i></a>
                                         </div>
@@ -276,7 +275,7 @@ include "variables.php"; ?>
                     </div>
                     <div class="item">
                         <div class="screenshot-thumb">
-                            <img src="img/showcase/03.jpg" class="img-fluid" alt=""/>
+                            <img src="https://picsum.photos/seed/picsum/200/300" class="img-fluid" alt=""/>
                             <div class="hover-content text-center">
                                 <div class="fancy-table">
                                     <div class="table-cell">
@@ -285,7 +284,7 @@ include "variables.php"; ?>
                                             <h5>Redesign Slack</h5>
                                         </div>
                                         <div class="zoom-icon">
-                                            <a class="lightbox" href="img/showcase/03.jpg"><i
+                                            <a class="lightbox" href="https://picsum.photos/seed/picsum/200/300"><i
                                                         class="lni-zoom-in"></i></a>
                                             <a href="#"><i class="lni-link"></i></a>
                                         </div>
@@ -296,7 +295,7 @@ include "variables.php"; ?>
                     </div>
                     <div class="item">
                         <div class="screenshot-thumb">
-                            <img src="img/showcase/04.jpg" class="img-fluid" alt=""/>
+                            <img src="https://picsum.photos/seed/picsum/200/300" class="img-fluid" alt=""/>
                             <div class="hover-content text-center">
                                 <div class="fancy-table">
                                     <div class="table-cell">
@@ -305,7 +304,7 @@ include "variables.php"; ?>
                                             <h5>Redesign Slack</h5>
                                         </div>
                                         <div class="zoom-icon">
-                                            <a class="lightbox" href="img/showcase/04.jpg"><i
+                                            <a class="lightbox" href="https://picsum.photos/seed/picsum/200/300"><i
                                                         class="lni-zoom-in"></i></a>
                                             <a href="#"><i class="lni-link"></i></a>
                                         </div>
@@ -316,7 +315,7 @@ include "variables.php"; ?>
                     </div>
                     <div class="item">
                         <div class="screenshot-thumb">
-                            <img src="img/showcase/05.jpg" class="img-fluid" alt=""/>
+                            <img src="https://picsum.photos/seed/picsum/200/300" class="img-fluid" alt=""/>
                             <div class="hover-content text-center">
                                 <div class="fancy-table">
                                     <div class="table-cell">
@@ -325,7 +324,7 @@ include "variables.php"; ?>
                                             <h5>Redesign Slack</h5>
                                         </div>
                                         <div class="zoom-icon">
-                                            <a class="lightbox" href="img/showcase/05.jpg"><i
+                                            <a class="lightbox" href="https://picsum.photos/seed/picsum/200/300"><i
                                                         class="lni-zoom-in"></i></a>
                                             <a href="#"><i class="lni-link"></i></a>
                                         </div>
@@ -336,7 +335,7 @@ include "variables.php"; ?>
                     </div>
                     <div class="item">
                         <div class="screenshot-thumb">
-                            <img src="img/showcase/01.jpg" class="img-fluid" alt=""/>
+                            <img src="https://picsum.photos/seed/picsum/200/300" class="img-fluid" alt=""/>
                             <div class="hover-content text-center">
                                 <div class="fancy-table">
                                     <div class="table-cell">
@@ -345,7 +344,7 @@ include "variables.php"; ?>
                                             <h5>Redesign Slack</h5>
                                         </div>
                                         <div class="zoom-icon">
-                                            <a class="lightbox" href="img/showcase/01.jpg"><i
+                                            <a class="lightbox" href="https://picsum.photos/seed/picsum/200/300"><i
                                                         class="lni-zoom-in"></i></a>
                                             <a href="#"><i class="lni-link"></i></a>
                                         </div>
@@ -357,7 +356,7 @@ include "variables.php"; ?>
                     </div>
                     <div class="item">
                         <div class="screenshot-thumb">
-                            <img src="img/showcase/02.jpg" class="img-fluid" alt=""/>
+                            <img src="https://picsum.photos/seed/picsum/200/300" class="img-fluid" alt=""/>
                             <div class="hover-content text-center">
                                 <div class="fancy-table">
                                     <div class="table-cell">
@@ -366,7 +365,7 @@ include "variables.php"; ?>
                                             <h5>Redesign Slack</h5>
                                         </div>
                                         <div class="zoom-icon">
-                                            <a class="lightbox" href="img/showcase/02.jpg"><i
+                                            <a class="lightbox" href="https://picsum.photos/seed/picsum/200/300"><i
                                                         class="lni-zoom-in"></i></a>
                                             <a href="#"><i class="lni-link"></i></a>
                                         </div>
@@ -891,7 +890,7 @@ include "variables.php"; ?>
             <div class="col-lg-3 col-md-6 col-xs-12">
                 <div class="single-team">
                     <div class="team-thumb">
-                        <img src="img/team/01.jpg" class="img-fluid" alt="">
+                        <img src="https://picsum.photos/seed/picsum/200/300" class="img-fluid" alt="">
                     </div>
 
                     <div class="team-details">
@@ -915,7 +914,7 @@ include "variables.php"; ?>
             <div class="col-lg-3 col-md-6 col-xs-12">
                 <div class="single-team">
                     <div class="team-thumb">
-                        <img src="img/team/02.jpg" class="img-fluid" alt="">
+                        <img src="https://picsum.photos/seed/picsum/200/300" class="img-fluid" alt="">
                     </div>
 
                     <div class="team-details">
@@ -939,7 +938,7 @@ include "variables.php"; ?>
             <div class="col-lg-3 col-md-6 col-xs-12">
                 <div class="single-team">
                     <div class="team-thumb">
-                        <img src="img/team/03.jpg" class="img-fluid" alt="">
+                        <img src="https://picsum.photos/seed/picsum/200/300" class="img-fluid" alt="">
                     </div>
 
                     <div class="team-details">
