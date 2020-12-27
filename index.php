@@ -33,7 +33,7 @@ include "variables.php"; ?>
             <?php if (have_rows('ilkeler', 'option')):
                 while (have_rows('ilkeler', 'option')):
                     the_row(); ?>
-                    <div class="col-lg-3 col-md-6 col-xs-12 m-1">
+                    <div class="col-lg-3 col-md-6 col-xs-12 mb-3">
                         <div class="services-item text-center card h-100 service-card">
                             <div class="icon">
                                 <i style="font-size: 60px;"
