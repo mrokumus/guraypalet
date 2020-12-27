@@ -134,11 +134,12 @@ include "variables.php"; ?>
             <div class="col-lg-12 col-md-12 col-xs-12 pr-0">
                 <div class="showcase-slider owl-carousel">
                     <?php if (have_rows('fotograflar', 'option')):while (have_rows('fotograflar', 'option')):the_row(); ?>
-                    <div class="item">
-                        <div class="screenshot-thumb" style="height: 500px; max-width: 300px; margin: 10px">
-                            <img src="<? echo get_sub_field("fotograf", "option")["url"] ?>" class="img-fluid" alt="" />
+                        <div class="item">
+                            <div class="screenshot-thumb" style="height: 500px; max-width: 300px; margin: 10px">
+                                <img src="<? echo get_sub_field("fotograf", "option")["url"] ?>" class="img-fluid"
+                                     alt=""/>
+                            </div>
                         </div>
-                    </div>
                     <? endwhile;endif; ?>
 
                 </div>
@@ -153,114 +154,64 @@ include "variables.php"; ?>
         <div class="col-lg-12">
             <div class="showcase-text section-header text-center">
                 <div>
-                    <h2 class="section-title"><? echo get_field("fotograflar_baslik", "option") ?></h2>
+                    <h2 class="section-title"><? echo get_field("sss_baslik", "option") ?></h2>
                     <div class="desc-text">
-                        <p><? echo get_field("fotograflar_metin", "option") ?></p>
+                        <p><? echo get_field("sss_metin", "option") ?></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="container">
-        <div id="accordion">
-            <div class="card">
-                <div class="card-header" id="headingOne">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                                aria-expanded="true" aria-controls="collapseOne">
-                            Collapsible Group Item #1
-                        </button>
-                    </h5>
-                </div>
+        <div class="accordion" id="accordionExample">
+            <?php if (have_rows('sss', 'option')):
+                while (have_rows('sss', 'option')):
+                    the_row();
+                    ?>
 
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
-                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
-                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
-                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
-                        of them accusamus labore sustainable VHS.
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading<? echo get_row_index() ?>">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse<? echo get_row_index() ?>" aria-expanded="false"
+                                    aria-controls="collapse<? echo get_row_index() ?>">
+                                <? echo get_sub_field("baslik", "option") ?>
+                            </button>
+                        </h2>
+                        <div id="collapse<? echo get_row_index() ?>" class="accordion-collapse collapse"
+                             aria-labelledby="heading<? echo get_row_index() ?>"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <? echo get_sub_field("metin", "option") ?>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingTwo">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                                aria-expanded="false" aria-controls="collapseTwo">
-                            Collapsible Group Item #2
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                    <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
-                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
-                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
-                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
-                        of them accusamus labore sustainable VHS.
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingThree">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
-                                aria-expanded="false" aria-controls="collapseThree">
-                            Collapsible Group Item #3
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                    <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
-                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
-                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
-                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
-                        of them accusamus labore sustainable VHS.
-                    </div>
-                </div>
-            </div>
+                <? endwhile;endif; ?>
         </div>
-
     </div>
 </section>
 <!-- İletişim -->
 <section id="contact" class="section">
-    <!-- Container Starts -->
     <div class="container">
-        <!-- Start Row -->
         <div class="row">
             <div class="col-lg-12">
                 <div class="contact-text section-header text-center">
                     <div>
-                        <h2 class="section-title">Get In Touch</h2>
+                        <h2 class="section-title"><?php the_field('iletisim_baslik', "option"); ?></h2>
                         <div class="desc-text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
-                            <p>eiusmod tempor incididunt ut labore et dolore.</p>
+                            <?php the_field('iletisim_metin', "option"); ?>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
-        <!-- End Row -->
-        <!-- Start Row -->
         <div class="row">
-            <!-- Start Col -->
             <div class="col-lg-6 col-md-12">
                 <form id="contactForm">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Name"
-                                       required data-error="Please enter your name">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="İsminiz"
+                                       required data-error="Lütfen isminizi Giriniz">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -291,41 +242,50 @@ include "variables.php"; ?>
                                           rows="4" data-error="Write your message" required></textarea>
                                 <div class="help-block with-errors"></div>
                             </div>
-                            <div class="submit-button">
-                                <button class="btn btn-common" id="submit" type="submit">Submit</button>
-                                <div id="msgSubmit" class="h3 hidden"></div>
-                                <div class="clearfix"></div>
+                            <div class="row" style="align-content: center">
+                                <div class="col-md-6">
+                                    <div class="control-group form-group">
+                                        <div class="g-recaptcha"
+                                             data-sitekey="6Lf-aeQZAAAAAIJ8RpXIJ7cnmDT_hlo80BpiFO1d"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="submit-button">
+                                        <button class="btn btn-common" id="submit" type="submit">Gönder</button>
+                                        <div id="msgSubmit" class="h3 hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
-            <!-- End Col -->
-            <!-- Start Col -->
-            <div class="col-lg-1">
-
-            </div>
-            <!-- End Col -->
-            <!-- Start Col -->
+            <div class="col-lg-1"></div>
             <div class="col-lg-4 col-md-12">
                 <div class="contact-img">
-                    <img src="img/contact/01.png" class="img-fluid" alt="">
+                    <? if (get_field("iletisim_resim", "option") == ""): ?>
+                        <img src="<? echo get_template_directory_uri() . "/inc/img/contact_us.svg" ?>" class="img-fluid"
+                             alt="Contact Image">
+                    <? else: ?>
+                        <img src="<? $contactImage = get_field("iletisim_resim", "option");
+                        echo $contactImage["url"] ?>" class="img-fluid" alt="Contact Image">
+                    <? endif; ?>
                 </div>
             </div>
-            <!-- End Col -->
-            <!-- Start Col -->
             <div class="col-lg-1">
             </div>
-            <!-- End Col -->
-
         </div>
-        <!-- End Row -->
     </div>
 </section>
+
 <!--Back To Top -->
 <a href="#" class="back-to-top">
     <i class="lni-chevron-up"></i>
 </a>
+
 <? get_footer() ?>
 
 

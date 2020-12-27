@@ -70,6 +70,14 @@ if ( function_exists( 'acf_add_options_page' ) ) {
         'capability'  => 'manage_options',
         'redirect'    => false
     ) );
+    acf_add_options_page( array(
+        'page_title'  => 'SSS Ayarları',
+        'menu_title'  => 'SSS Ayarları',
+        'menu_slug'   => 'sss-settings',
+        'parent_slug' => 'general-settings',
+        'capability'  => 'manage_options',
+        'redirect'    => false
+    ) );
 
     acf_add_options_page( array(
         'page_title'  => 'İletişim Ayarları',
