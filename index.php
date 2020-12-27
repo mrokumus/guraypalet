@@ -206,7 +206,7 @@ include "variables.php"; ?>
         </div>
         <div class="row">
             <div class="col-lg-6 col-md-12">
-                <form id="contactForm">
+                <form id="contactForm" action="mail.php" method="post">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -217,47 +217,38 @@ include "variables.php"; ?>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" placeholder="Subject" id="msg_subject" class="form-control"
-                                       name="msg_subject" required data-error="Please enter your subject">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="email" name="email" placeholder="Email"
-                                       required data-error="Please enter your Email">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" placeholder="Budget" id="budget" class="form-control" name="budget"
-                                       required data-error="Please enter your Budget">
+                                <input type="text" placeholder="Konu" id="msg_subject" class="form-control"
+                                       name="msg_subject" required data-error="Lütfen Konunuzu Giriniz">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <textarea class="form-control" id="message" name="message" placeholder="Write Message"
-                                          rows="4" data-error="Write your message" required></textarea>
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Email"
+                                       required data-error="Lütfen Email adresinizi Giriniz">
                                 <div class="help-block with-errors"></div>
                             </div>
-                            <div class="row" style="align-content: center">
-                                <div class="col-md-6">
-                                    <div class="control-group form-group">
-                                        <div class="g-recaptcha"
-                                             data-sitekey="6Lf-aeQZAAAAAIJ8RpXIJ7cnmDT_hlo80BpiFO1d"></div>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <textarea class="form-control" id="message" name="message" placeholder="Mesajınız"
+                                          rows="4" data-error="Lütfen Mesajınızı Giriniz" required></textarea>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="row">
                                 <div class="col-md-6">
                                     <div class="submit-button">
                                         <button class="btn btn-common" id="submit" type="submit">Gönder</button>
                                         <div id="msgSubmit" class="h3 hidden"></div>
                                         <div class="clearfix"></div>
                                     </div>
-
                                 </div>
-
+                                <div class="col-md-6">
+                                    <div class="control-group form-group">
+                                        <div class="g-recaptcha"
+                                             data-sitekey="<?echo $google_site_key?>"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
