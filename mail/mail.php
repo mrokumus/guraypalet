@@ -14,7 +14,7 @@ if (!$captcha) {
 
     return false;
 }
-$secretKey = "6LeWGRYaAAAAAOfd9dQ6PtfIxjxDNYb2uUTq92qH";
+$secretKey = "secret";
 $ip = $_SERVER['REMOTE_ADDR'];
 $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . $secretKey . "&response=" . $captcha . "&remoteip=" . $ip);
 $responseKeys = json_decode($response, true);
