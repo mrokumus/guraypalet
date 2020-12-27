@@ -206,7 +206,7 @@ include "variables.php"; ?>
         </div>
         <div class="row">
             <div class="col-lg-6 col-md-12">
-                <form id="contactForm" action="mail.php" method="post">
+                <form id="contactForm" action="<? echo get_template_directory_uri() ?>/mail/mail.php" method="post">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -246,7 +246,7 @@ include "variables.php"; ?>
                                 <div class="col-md-6">
                                     <div class="control-group form-group">
                                         <div class="g-recaptcha"
-                                             data-sitekey="<?echo $google_site_key?>"></div>
+                                             data-sitekey="<? echo $google_site_key ?>"></div>
                                     </div>
                                 </div>
                             </div>
@@ -271,6 +271,27 @@ include "variables.php"; ?>
         </div>
     </div>
 </section>
+
+<script>
+    // const url = window.location.href;
+    // const url = new URL(url);
+    const s = "https://guraypalet.com/#contact/?r=send";
+    const f = "https://guraypalet.com/#contact/?r=fail";
+    const r = "https://guraypalet.com/#contact/?r=r";
+    const g = "https://guraypalet.com/#contact/?r=g";
+    if (window.location.href === s) {
+        document.getElementById("success").style.display = "block";
+    }
+    if (window.location.href === f) {
+        document.getElementById("fail").style.display = "block";
+    }
+    if (window.location.href === r) {
+        document.getElementById("r").style.display = "block";
+    }
+    if (window.location.href === g) {
+        document.getElementById("g").style.display = "block";
+    }
+</script>/
 
 <!--Back To Top -->
 <a href="#" class="back-to-top">
