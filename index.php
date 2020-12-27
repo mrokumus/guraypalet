@@ -33,7 +33,7 @@ include "variables.php"; ?>
             <?php if (have_rows('ilkeler', 'option')):
                 while (have_rows('ilkeler', 'option')):
                     the_row(); ?>
-                    <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="col-lg-3 col-md-6 col-xs-12 m-1">
                         <div class="services-item text-center card h-100 service-card">
                             <div class="icon">
                                 <i style="font-size: 60px;"
@@ -94,7 +94,7 @@ include "variables.php"; ?>
                 while (have_rows('hizmetler', 'option')):
                     the_row();
                     ?>
-                    <div class="col-lg-6 col-md-6 col-xs-12 p-0">
+                    <div class="col-lg-6 col-md-6 col-xs-12 p-0 text-center">
                         <div class="feature-item featured-border2 h-100">
                             <div class="row">
                                 <div class="col-lg-4">
@@ -235,19 +235,17 @@ include "variables.php"; ?>
                                           rows="4" data-error="Lütfen Mesajınızı Giriniz" required></textarea>
                                 <div class="help-block with-errors"></div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="submit-button">
-                                        <button class="btn btn-common" id="submit" type="submit">Gönder</button>
-                                        <div id="msgSubmit" class="h3 hidden"></div>
-                                        <div class="clearfix"></div>
-                                    </div>
+                            <div class="col-md-6">
+                                <div class="control-group form-group">
+                                    <div class="g-recaptcha"
+                                         data-sitekey="<? echo $google_site_key ?>"></div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="control-group form-group">
-                                        <div class="g-recaptcha"
-                                             data-sitekey="<? echo $google_site_key ?>"></div>
-                                    </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="submit-button">
+                                    <button class="btn btn-common" id="submit" type="submit">Gönder</button>
+                                    <div id="msgSubmit" class="h3 hidden"></div>
+                                    <div class="clearfix"></div>
                                 </div>
                             </div>
                         </div>

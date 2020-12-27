@@ -34,7 +34,6 @@
   }
 }
 
-
 #services {
   background: #f9f9f9; }
 #services .featured-bg {
@@ -98,3 +97,21 @@
   -moz-transition: all .8s ease;
   -webkit-transition: all .8s ease;
   transition: all .8s ease; }
+
+@media (min-width: 576px) {
+
+  .services-item{
+    margin-bottom: 10px;
+  }
+  .servicess{
+    text-align: -webkit-center;
+  }
+  .feature-icon{
+    margin-right: 25vw;
+
+  }
+  .menu{
+    flex-direction: column;
+    text-align: center;
+  }
+}
